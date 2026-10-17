@@ -1,113 +1,17 @@
+import Navbar from './components/Navbar'
+import Reveal from './components/Reveal'
 import Image from 'next/image'
 
+const capabilities = [
+  ['01', 'One source of truth', 'Orders, inventory, customers, and fulfillment stay in sync across every sales channel.'],
+  ['02', 'Decisions at a glance', 'Turn live commerce signals into focused actions with reporting built for operators.'],
+  ['03', 'Workflows that scale', 'Automate routine operations and give your team room to create better customer moments.'],
+]
+
+function Dashboard() {
+  return <div className="product-stage" aria-label="StoreHub dashboard preview"><div className="orbit one" /><div className="orbit two" /><div className="dashboard"><div className="dash-bar"><b> S </b><span>Overview</span><i /><em>May 08 – May 14⌄</em><strong>MA</strong></div><div className="dash-body"><aside><b>⌂</b><span>▣</span><span>◫</span><span>◌</span><span>▤</span></aside><section><div className="dash-heading"><div><small>Good morning, Maya</small><h3>Here&apos;s your store today.</h3></div><button>Export ↓</button></div><div className="stats"><div><small>Net sales</small><strong>$84,280</strong><em>↑ 18.4%</em></div><div><small>Orders</small><strong>1,284</strong><em>↑ 12.7%</em></div><div><small>Returning customers</small><strong>42.8%</strong><em>↑ 5.2%</em></div></div><div className="chart-card"><div><p>Sales performance</p><small>Gross sales across all channels</small></div><span>Weekly⌄</span><div className="chart"><svg viewBox="0 0 600 160" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stopColor="#15803d" stopOpacity=".22" /><stop offset="100%" stopColor="#15803d" stopOpacity="0" /></linearGradient></defs><path d="M0 133C25 128 45 116 70 121S115 85 142 101S177 109 205 80S246 86 274 63S315 90 342 70S386 33 416 57S459 76 487 38S535 53 600 10V160H0Z" fill="url(#fill)"/><path d="M0 133C25 128 45 116 70 121S115 85 142 101S177 109 205 80S246 86 274 63S315 90 342 70S386 33 416 57S459 76 487 38S535 53 600 10" fill="none" stroke="#15803d" strokeWidth="3" /></svg></div><div className="days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div></section></div></div><div className="float fulfill"><b>✓</b><p><small>Fulfillment rate</small><strong>98.7%</strong></p><em>↑ 4.2%</em></div><div className="float order"><b>▣</b><p><small>New order</small><strong>#SH-3048</strong></p><em>$248.00</em></div></div>
+}
+
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+  return <main><Navbar /><section className="hero" id="platform"><Reveal className="hero-copy" distance={18}><p className="eyebrow"><i /> Your business, connected</p><h1>Building digital<br /><em>products &amp; brands.</em></h1><p className="lead">StoresHub brings the tools your team already uses into one clear, modern workspace—so you can focus on growing your business.</p><div className="hero-actions"><a className="button" href="#demo">Get started for free <b>→</b></a><a className="text-link" href="#solutions">Explore features <b>↗</b></a></div><div className="proof"><span><i>MS</i><i>AK</i><i>JP</i></span><p>Built for ambitious teams and <strong>growing businesses</strong></p></div></Reveal><Reveal delay={.16} distance={32}><Dashboard /></Reveal></section><section className="logos"><p>Designed for business teams like yours</p><div><b>Northstar</b><b>atelier<span>·</span></b><b>FORM</b><b>Haven</b><b>morrow</b></div></section><section className="results" id="solutions"><Reveal className="intro"><p className="eyebrow">Everything in one place</p><h2>Work with the tools<br />you already <em>use.</em></h2><p>Deliver better experiences without the complexity. StoresHub helps every part of your business move together.</p></Reveal><div className="capabilities">{capabilities.map(([number, title, text], index) => <Reveal key={number} delay={index * .1}><article><span>{number}</span><h3>{title}</h3><p>{text}</p><a href="#demo">Learn more ↗</a></article></Reveal>)}</div></section><section className="feature-showcase"><Reveal className="feature-copy"><p className="eyebrow">Connected workflows</p><h2>Keep your team in sync, from idea to delivery.</h2><p>Give every department a shared view of the work that matters, with live reporting and intuitive tools that keep operations moving.</p><ul><li>Continuous integration and deployment</li><li>Dynamic reports and dashboards</li><li>Knowledge management built in</li></ul></Reveal><Reveal delay={.12} className="feature-image"><Image src="/feature-1.png" alt="StoresHub analytics dashboard" width={1200} height={780} sizes="(max-width: 900px) 100vw, 50vw" /></Reveal></section><section className="feature-showcase feature-reverse"><Reveal delay={.08} className="feature-image"><Image src="/feature-2.png" alt="StoresHub workspace interface" width={1200} height={780} sizes="(max-width: 900px) 100vw, 50vw" /></Reveal><Reveal className="feature-copy"><p className="eyebrow">Built for your growth</p><h2>Turn every insight into your next best move.</h2><p>See what is working, automate what is repeatable, and make decisions with the confidence of a fully connected business.</p><ul><li>Individual configuration for every team</li><li>Templates that make work simpler</li><li>Limitless business automation</li></ul></Reveal></section><section className="impact" id="customers"><Reveal><div><p className="eyebrow">Built to grow with you</p><h2>Technology, innovation, and insight for every next step.</h2><p>StoresHub gives your whole team the shared context to make confident decisions and create great customer experiences.</p><a className="text-link" href="#demo">Explore StoreHub <b>↗</b></a></div></Reveal><Reveal delay={.12}><div className="metrics"><article><strong>24%</strong><p>increase in repeat revenue</p></article><article><strong>38 hrs</strong><p>saved per team, every month</p></article><article><strong>4.9/5</strong><p>average customer rating</p></article></div></Reveal></section><section className="pricing" id="pricing"><Reveal className="pricing-intro"><p className="eyebrow">Simple, transparent pricing</p><h2>Choose the plan that fits your team.</h2><p>Start with what you need today and scale when you are ready.</p></Reveal><div className="pricing-grid"><Reveal><article><h3>Starter</h3><p>For individuals and small projects getting started.</p><strong><small>$</small>19<span>/month</span></strong><ul><li>Individual configuration</li><li>No setup or hidden fees</li><li>1 team member</li><li>6 months support</li></ul><a className="plan-button" href="#demo">Choose Starter</a></article></Reveal><Reveal delay={.1}><article className="popular"><span className="popular-label">Most popular</span><h3>Business</h3><p>For growing teams that need more collaboration.</p><strong><small>$</small>49<span>/month</span></strong><ul><li>Everything in Starter</li><li>Up to 10 team members</li><li>Advanced analytics</li><li>Priority support</li></ul><a className="button" href="#demo">Choose Business</a></article></Reveal><Reveal delay={.2}><article><h3>Enterprise</h3><p>For organizations with complex operational needs.</p><strong>Let&apos;s talk</strong><ul><li>Everything in Business</li><li>Unlimited team members</li><li>Custom integrations</li><li>Dedicated success manager</li></ul><a className="plan-button" href="mailto:hello@storehub.example">Contact sales</a></article></Reveal></div></section><section className="cta" id="demo"><Reveal><div><p className="eyebrow">Start your free trial today</p><h2>Build what&apos;s next<br /><em>with StoresHub.</em></h2><p>Try the StoresHub platform for 30 days. No credit card required.</p><a className="button light" href="mailto:hello@storehub.example">Start free trial <b>→</b></a></div></Reveal></section><footer id="resources"><div className="footer-top"><a className="brand" href="#platform"><span className="brand-mark"><i /><i /><i /></span>StoresHub</a><p>One clear view of your<br />commerce operation.</p><a href="mailto:hello@storehub.example">hello@storehub.example ↗</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} StoresHub, Inc.</span><span>Built with intention.</span><p><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#linkedin">LinkedIn</a></p></div></footer></main>
 }
